@@ -1,0 +1,239 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* END RESET */
+
+/* GENERAL STYLING */
+body {
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+    font-size: 21px;
+    font-weight: 200;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 20% repeat(3, 1fr) 20%;
+}
+
+/* NAVIGATION */
+.main-nav {
+    grid-column: 2 / -2;
+}
+
+.main-nav ul {
+    display: flex;
+    margin: auto;    
+    padding: 10px;
+    border: solid 1px #e4e4e4;
+    border-radius: 4px;
+}
+
+.main-nav ul .left {
+    margin-right: auto;
+}
+
+.main-nav ul .end-nav {
+    /* margin-right: auto; */
+}
+
+.main-nav ul li {
+    margin: 10px;
+}
+
+/* HEADER */
+.intro {
+    grid-column: 2 / -2;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-self: center;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.intro * {
+    justify-self: center;
+}
+
+.intro h1 {
+    font-size: 2.75em;
+    margin-top: 6vh;
+    margin-bottom: 6vh;
+}
+
+/* .intro h1::after {
+    content: "";
+    display: flex;
+    margin: auto;
+    height: 2px;
+    width: 55%;
+    background: #e4e9e9;
+    margin-top: 2vh;
+} */
+
+.intro-pic {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    margin: 1vh;
+}
+
+.carousel {
+    font-size: 1.25em;
+    color: #ffc525;
+    font-weight: 600;
+    margin: 2vh;
+}
+
+.cta {
+    font-size: 1.25em;
+    margin: 1vh;
+}
+
+.secondary-nav ul {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+    padding: 10px;
+}
+
+.secondary-nav  li {
+    margin: 8px;
+}
+
+.secondary-nav i {
+    padding: 4px;
+    border: solid 1px;
+    border-radius: 5px;
+}
+
+
+.hide {
+    display: none;
+}
+
+/* PORTFOLIO */
+#mywork-header {
+    grid-column: 2 / -2;
+    justify-self: center;
+    font-size: 2em;
+    margin: 5vh;
+}
+
+#mywork-header::after {
+    content: "";
+    display: flex;
+    margin: auto;
+    height: 2px;
+    width: 60%;
+    background: #c5c5c5;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+
+#portfolio {
+    grid-column: 2 / -2;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+/* Project containers */
+.proj-container {
+    border: 1px solid gray;
+    height: 300px;
+    width: 300px;
+    text-align: center;
+    font-size: 1em;
+    border-radius: 12px;
+    padding: 5px;
+    grid-column: 2;
+    justify-self: center;
+}
+
+.proj-img {
+    margin: 8px 0;
+}
+
+.proj-desc {
+    font-size: 0.8em;
+    margin: 4px 4px;
+}
+
+.proj-tech {
+    font-size: 0.8em;
+    margin: 0.9em;
+}
+
+.proj-src {
+    font-size: 0.7em;
+    color: white;
+    border: solid 1px #222222;
+    background: #464646;
+    border-radius: 5px;
+    padding: 2px 4px;
+}
+
+
+
+/* nav ul {
+    display: flex;
+    width: 60%;
+    margin: auto;    
+    padding: 10px;
+    border: solid 1px #e4e4e4;
+    border-radius: 4px;
+}
+
+nav ul .left {
+    margin-right: auto;
+}
+
+nav ul li {
+    margin: 10px;
+} */
