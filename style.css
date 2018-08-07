@@ -53,16 +53,19 @@ body {
     font-family: Helvetica Neue, Helvetica, sans-serif;
     font-size: 21px;
     font-weight: 200;
+    background-color: #f0f0f0;
 }
 
 .wrapper {
     display: grid;
     grid-template-columns: 20% repeat(3, 1fr) 20%;
+    height: 100vh;
 }
 
 /* NAVIGATION */
 .main-nav {
     grid-column: 2 / -2;
+    background-color: white;
 }
 
 .main-nav ul {
@@ -91,8 +94,9 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
-    justify-self: center;
+    justify-self: stretch;
     border-bottom: 1px solid #e6e6e6;
+    background-color: white;
 }
 
 .intro * {
@@ -130,7 +134,7 @@ body {
 }
 
 .cta {
-    font-size: 1.25em;
+    font-size: 1.15em;
     margin: 1vh;
 }
 
@@ -138,7 +142,7 @@ body {
     display: flex;
     flex-direction: row;
     margin: auto;
-    justify-content: center;
+    justify-self: center;
     padding: 10px;
 }
 
@@ -160,9 +164,11 @@ body {
 /* PORTFOLIO */
 #mywork-header {
     grid-column: 2 / -2;
-    justify-self: center;
+    justify-self: stretch;
+    text-align: center;
     font-size: 2em;
-    margin: 5vh;
+    background-color: white;
+    padding: 4vh 0;
 }
 
 #mywork-header::after {
@@ -170,7 +176,7 @@ body {
     display: flex;
     margin: auto;
     height: 2px;
-    width: 60%;
+    width: 5vw;
     background: #c5c5c5;
     margin-top: 2vh;
     margin-bottom: 1vh;
@@ -181,6 +187,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
+    background: white;
 }
 
 /* Project containers */
@@ -217,8 +224,32 @@ body {
     background: #464646;
     border-radius: 5px;
     padding: 2px 4px;
+    text-decoration: none;
 }
 
+/* Hover Effects */
+.proj-container:hover .blink {
+    animation-name: blink;
+    animation-duration: 0.6s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-play-state: running;
+}
+
+.proj-src:hover {
+    color: #80f83b;
+}
+
+.blink {
+}
+
+@keyframes blink {
+    from {color: #464646;}
+    to {opacity: #FFFFFF;}
+}
+
+/* FOOTER */
 
 
 /* nav ul {
