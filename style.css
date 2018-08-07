@@ -48,7 +48,9 @@ table {
 }
 /* END RESET */
 
-/* GENERAL STYLING */
+/*-----------------------------------------------------------------------------
+ - GENERAL STYLING 
+ -----------------------------------------------------------------------------*/
 body {
     font-family: Helvetica Neue, Helvetica, sans-serif;
     font-size: 21px;
@@ -56,13 +58,23 @@ body {
     background-color: #f0f0f0;
 }
 
+a {
+    text-decoration: none;
+}
+
+
+
 .wrapper {
     display: grid;
     grid-template-columns: 20% repeat(3, 1fr) 20%;
     height: 100vh;
 }
 
-/* NAVIGATION */
+
+/*-----------------------------------------------------------------------------
+ - NAVIGATION 
+ ----------------------------------------------------------------------------*/
+
 .main-nav {
     grid-column: 2 / -2;
     background-color: white;
@@ -88,7 +100,9 @@ body {
     margin: 10px;
 }
 
-/* HEADER */
+/*----------------------------------------------------------------------------- 
+ - HEADER 
+ -----------------------------------------------------------------------------*/
 .intro {
     grid-column: 2 / -2;
     display: grid;
@@ -147,12 +161,15 @@ body {
 }
 
 .secondary-nav  li {
+    font-size: 0.85em;
     margin: 8px;
+    border-radius: 5px;
 }
 
 .secondary-nav i {
     padding: 4px;
     border: solid 1px;
+    color: #000000;
     border-radius: 5px;
 }
 
@@ -161,7 +178,9 @@ body {
     display: none;
 }
 
-/* PORTFOLIO */
+/*----------------------------------------------------------------------------
+ - PORTFOLIO 
+ ----------------------------------------------------------------------------*/
 #mywork-header {
     grid-column: 2 / -2;
     justify-self: stretch;
@@ -203,6 +222,8 @@ body {
     justify-self: center;
 }
 
+
+
 .proj-img {
     margin: 8px 0;
 }
@@ -217,18 +238,30 @@ body {
     margin: 0.9em;
 }
 
-.proj-src {
-    font-size: 0.7em;
-    color: white;
-    border: solid 1px #222222;
+.proj-link, .proj-link:visited, .proj-src, .proj-src:visited {
+    font-size: 0.65em;
+    font-family: 'Quantico';
+    color: #ececec;
+    border: solid 1px #969696;
     background: #464646;
     border-radius: 5px;
     padding: 2px 4px;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
-/* Hover Effects */
-.proj-container:hover .blink {
+/*-----------------------------------------------------------------------------
+ - Hover Effects 
+ -----------------------------------------------------------------------------*/
+.secondary-nav li:hover {
+    box-shadow: 0px 0px 5px 1px #a4c9ff, 0px 0px 5px 1px #a4c9ff;
+}
+
+.proj-link:hover, .proj-src:hover {
+    color: #98ff79;
+}
+
+.proj-link:hover .blink, .proj-src:hover .blink {
     animation-name: blink;
     animation-duration: 0.6s;
     animation-timing-function: linear;
@@ -237,16 +270,15 @@ body {
     animation-play-state: running;
 }
 
-.proj-src:hover {
-    color: #80f83b;
-}
 
-.blink {
+
+a:visited {
+    color: inherit;
 }
 
 @keyframes blink {
     from {color: #464646;}
-    to {opacity: #FFFFFF;}
+    to {color: #98ff79;}
 }
 
 /* FOOTER */
