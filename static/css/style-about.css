@@ -1,0 +1,170 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* END RESET */
+
+/*-----------------------------------------------------------------------------
+ - GENERAL STYLING 
+ -----------------------------------------------------------------------------*/
+body {
+    font-family: 'Comfortaa', Helvetica Neue, Helvetica, sans-serif;
+    font-size: 21px;
+    font-weight: 200;
+    background-color: #fdfcfc;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 25% repeat(3, 1fr) 25%;
+    height: 100vh;
+}
+
+
+/*-----------------------------------------------------------------------------
+ - NAVIGATION 
+ ----------------------------------------------------------------------------*/
+
+.main-nav {
+    grid-column: 2 / -2;
+    background-color: #ffffff;
+}
+
+.main-nav ul {
+    display: flex;
+    margin: auto;    
+    padding: 10px;
+    /* border: solid 1px #e4e4e4; */
+    border-radius: 4px;
+}
+
+.main-nav ul .left {
+    margin-right: auto;
+}
+
+.main-nav ul li {
+    margin: 10px;
+}
+
+.main-nav ul li a {
+    color: #000000
+}
+
+/*----------------------------------------------------------------------------- 
+ - HEADER 
+ -----------------------------------------------------------------------------*/
+.intro {
+    grid-column: 2 / -2;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    justify-self: stretch;
+    background-color: #ffffff;
+}
+
+.intro * {
+    justify-self: center;
+}
+
+.intro h1 {
+    /* font-family: 'Nothing You Could Do'; */
+    font-size: 2.85em;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.pic-container {
+    grid-column: 2 / 3;
+    align-self: stretch;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-pic {
+    height: 10vw;
+    width: auto;
+    border-radius: 50%;
+    margin: 1vh;
+}
+
+.intro h3 {
+    font-size: 1.25em;
+    margin: 2vh;
+    text-align: center;
+}
+
+
+.my-story {
+    grid-column: 3 / -2;
+    background: #ffffff;
+}
+
+.my-story p {
+    margin: 2vh 0;
+    color: #8b8b8b;
+}
+
+.my-story h2 {
+    font-size: 2em;
+}
+
+/*-----------------------------------------------------------------------------
+ - Hover Effects 
+ -----------------------------------------------------------------------------*/
+.main-nav ul li a:hover, .secondary-nav ul li a i:hover {
+    color: #3d8bff;
+}
+
+a:visited {
+    color: inherit;
+}
+
