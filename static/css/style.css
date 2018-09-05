@@ -61,10 +61,53 @@ a {
     text-decoration: none;
 }
 
+/*-----------------------------------------------------------------------------
+ - GRID
+ -----------------------------------------------------------------------------*/
 .wrapper {
     display: grid;
     grid-template-columns: 25% repeat(3, 1fr) 25%;
     height: 100vh;
+}
+
+.main-nav {
+    grid-column: 2 / -2;
+}
+
+.intro {
+    grid-column: 2 / -2;
+}
+
+#mywork-header {
+    grid-column: 2 / -2;
+}
+
+#portfolio {
+    grid-column: 2 / -2;
+}
+
+@media only screen and (max-width: 1200px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 100vh;
+    }
+
+    .main-nav {
+        grid-column: 1 / -1;
+    }
+
+    .intro {
+        grid-column: 1 / -1;
+    }
+
+    #mywork-header {
+        grid-column: 1 / -1;
+    }
+
+    #portfolio {
+        grid-column: 1 / -1;
+    }
 }
 
 /*-----------------------------------------------------------------------------
@@ -72,7 +115,6 @@ a {
  ----------------------------------------------------------------------------*/
 
 .main-nav {
-    grid-column: 2 / -2;
     background-color: #ffffff;
 }
 
@@ -125,7 +167,6 @@ a {
  - HEADER 
  -----------------------------------------------------------------------------*/
 .intro {
-    grid-column: 2 / -2;
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
@@ -171,7 +212,6 @@ a {
  - PORTFOLIO 
  ----------------------------------------------------------------------------*/
 #mywork-header {
-    grid-column: 2 / -2;
     font-size: 2em;
     background-color: #ffffff;
     display: flex;
@@ -180,7 +220,6 @@ a {
 }
 
 #portfolio {
-    grid-column: 2 / -2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
@@ -272,6 +311,7 @@ a:visited {
 .rot-phrase {
     color: #ffc525;
     font-weight: 600;
+    margin-right: 200px;
 }
 
 .rot-phrase span {
@@ -302,3 +342,5 @@ a:visited {
     70% { opacity: 0; }
     100% { opacity: 0; }
 }
+
+
