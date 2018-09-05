@@ -2,7 +2,6 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -67,7 +66,6 @@ a {
     grid-template-columns: 25% repeat(3, 1fr) 25%;
     height: 100vh;
 }
-
 
 /*-----------------------------------------------------------------------------
  - NAVIGATION 
@@ -147,11 +145,12 @@ a {
 }
 
 .intro-pic {
-    height: 10vw;
+    height: 275px;
     width: auto;
     border-radius: 50%;
     margin: 1vh;
 }
+
 .intro h3 {
     font-size: 1.25em;
     margin: 2vh;
@@ -161,6 +160,7 @@ a {
 .cta {
     font-size: 1.15em;
     margin-top: 1vh;
+    color: #8b8b8b;
 }
 
 .hide {
@@ -275,19 +275,20 @@ a:visited {
 }
 
 .rot-phrase span {
-    /* position: absolute; */
-    opacity: 0;
+    /* opacity: 1; */
     overflow: hidden;
+    position: absolute;
     animation: rotate-phrase 15s linear infinite 0s;
-
 }
 
 .rot-phrase span:nth-child(2) {
+    opacity: 0;
     animation-delay: 5s;
     color: #ffc525;
 }
 
 .rot-phrase span:nth-child(3) {
+    opacity: 0;
     animation-delay: 10s;
     color: #ffc525;
 }
