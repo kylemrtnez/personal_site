@@ -220,6 +220,7 @@ a {
 }
 
 .intro h3 {
+    justify-self: stretch;
     font-size: 1.25em;
     margin: 2vh;
     text-align: center;
@@ -320,18 +321,26 @@ a {
 /*-----------------------------------------------------------------------------
  - HAMBURGER
  -----------------------------------------------------------------------------*/
+ .mobile-nav {
+     display: none;
+ }
+
 .hamburger {
-    display: none;
+    /* display: none; */
     background: #ffffff;
     border: none;
     color: #000000;
 }
 
 @media only screen and (max-width: 600px) {
-    .hamburger {
+    .mobile-nav {
         display: inline-block;
-
     }
+
+    .dropdown-content {
+        display: none;
+    }
+
     .hamburger > i {
         font-size: 1.65em !important;
     }
@@ -395,7 +404,7 @@ a:visited {
 
 @media only screen and (max-width: 600px) {
     #funny-phrase {
-        font-size: 0.7em;
+        font-size: 0.75em;
     }
 }
 .rot-phrase span {
