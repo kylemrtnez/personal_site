@@ -86,7 +86,31 @@ a {
     grid-column: 2 / -2;
 }
 
-@media only screen and (max-width: 1800px) {
+@media only screen and (max-width: 1600px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 100vh;
+    }
+
+    .main-nav {
+        grid-column: 1 / -1;
+    }
+
+    .intro {
+        grid-column: 1 / -1;
+    }
+
+    #mywork-header {
+        grid-column: 1 / -1;
+    }
+
+    #portfolio {
+        grid-column: 1 / -1;
+    }
+}
+
+@media only screen and (max-width: 600px) {
     .wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -183,6 +207,7 @@ a {
     font-size: 2.85em;
     margin-top: 2vh;
     margin-bottom: 2vh;
+    text-align: center;
 }
 
 .intro-pic {
@@ -204,6 +229,27 @@ a {
     color: #8b8b8b;
 }
 
+@media only screen and (max-width: 600px) {
+    .intro h1 {
+        font-size: 2.50em;
+    }
+
+    .intro h3 {
+        font-size: 1.0em;
+    }
+
+    .intro-pic {
+        height: 250px;
+        width: auto;
+    }
+
+    .cta {
+        margin-left: 10px;
+        font-size: 0.9em;
+        text-align: center;
+    }
+}
+
 .hide {
     display: none;
 }
@@ -214,6 +260,7 @@ a {
 #mywork-header {
     font-size: 2em;
     background-color: #ffffff;
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
