@@ -74,8 +74,6 @@ a {
     grid-column: 2 / -2;
 }
 
-
-
 .intro {
     grid-column: 2 / -2;
 }
@@ -112,7 +110,7 @@ a {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -189,6 +187,56 @@ a {
     border-radius: 5px;
 }
 
+/*-----------------------------------------------------------------------------
+ - MOBILE NAV
+ -----------------------------------------------------------------------------*/
+ .mobile-nav {
+     display: none;
+ }
+
+.hamburger {
+    /* display: none; */
+    background: #ffffff;
+    border: none;
+    color: #000000;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-nav > ul > .right {
+        display: none;
+    }
+
+    .main-nav > ul {
+        flex-direction: column;
+    }
+
+    .main-nav ul .left {
+        margin-right: 0;
+    }
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        position: absolute;
+        margin-top: 5px;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+
+    .hamburger > i {
+        font-size: 1.65em !important;
+    }
+
+    .toggle-display {
+        /* this is used for the dropdown menu */
+        display: flex;
+    }
+
+}
+
 /*----------------------------------------------------------------------------- 
  - HEADER 
  -----------------------------------------------------------------------------*/
@@ -232,7 +280,7 @@ a {
     color: #8b8b8b;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
     .intro h1 {
         font-size: 2.50em;
     }
@@ -318,37 +366,7 @@ a {
     text-transform: uppercase;
 }
 
-/*-----------------------------------------------------------------------------
- - HAMBURGER
- -----------------------------------------------------------------------------*/
- .mobile-nav {
-     display: none;
- }
 
-.hamburger {
-    /* display: none; */
-    background: #ffffff;
-    border: none;
-    color: #000000;
-}
-
-@media only screen and (max-width: 600px) {
-    .mobile-nav {
-        display: inline-block;
-    }
-
-    .dropdown-content {
-        display: none;
-    }
-
-    .hamburger > i {
-        font-size: 1.65em !important;
-    }
-
-    .main-nav > ul > .right {
-        display: none;
-    }
-}
 
 /*-----------------------------------------------------------------------------
  - HOVER EFFECTS
