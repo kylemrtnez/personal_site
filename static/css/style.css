@@ -74,6 +74,8 @@ a {
     grid-column: 2 / -2;
 }
 
+
+
 .intro {
     grid-column: 2 / -2;
 }
@@ -316,9 +318,35 @@ a {
 }
 
 /*-----------------------------------------------------------------------------
+ - HAMBURGER
+ -----------------------------------------------------------------------------*/
+.hamburger {
+    display: none;
+    background: #ffffff;
+    border: none;
+    color: #000000;
+}
+
+@media only screen and (max-width: 600px) {
+    .hamburger {
+        display: inline-block;
+
+    }
+    .hamburger > i {
+        font-size: 1.65em !important;
+    }
+
+    .main-nav > ul > .right {
+        display: none;
+    }
+}
+
+/*-----------------------------------------------------------------------------
  - HOVER EFFECTS
  -----------------------------------------------------------------------------*/
-.main-nav ul li a:hover, .secondary-nav ul li a i:hover {
+.main-nav ul li a:hover, 
+.main-nav ul button:hover i, 
+.secondary-nav ul li a i:hover {
     color: #3d8bff;
 }
 
@@ -359,8 +387,14 @@ a:visited {
     color: #ffc525;
     font-weight: 600;
     margin-right: 200px;
+    line-height: normal;
 }
 
+@media only screen and (max-width: 600px) {
+    #funny-phrase {
+        font-size: 0.7em;
+    }
+}
 .rot-phrase span {
     /* opacity: 1; */
     overflow: hidden;
@@ -389,5 +423,4 @@ a:visited {
     70% { opacity: 0; }
     100% { opacity: 0; }
 }
-
 
