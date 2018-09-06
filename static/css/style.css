@@ -345,9 +345,12 @@ a {
  - HOVER EFFECTS
  -----------------------------------------------------------------------------*/
 .main-nav ul li a:hover, 
+/* Need both of the following for firefox */
 .main-nav ul button:hover i, 
+.main-nav ul button:hover, 
 .secondary-nav ul li a i:hover {
     color: #3d8bff;
+    cursor: pointer;
 }
 
 .secondary-nav li:hover {
