@@ -1,13 +1,4 @@
 'use strict'
-
-// function 
-// function toggleDisplay() {
-//     let dropdownContent = document.getElementsByClassName('dropdown-content');
-//     dropdownContent.forEach(function(ele) {
-//         ele.classList.toggle('toggle-display');
-//     });
-// }
-
 window.addEventListener('load', function() {
     function toggleDisplay() {
         let dropdownContent = document.getElementsByClassName('dropdown-content');

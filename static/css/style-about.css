@@ -142,6 +142,55 @@ a {
     color: #000000
 }
 
+/*-----------------------------------------------------------------------------
+ - MOBILE NAV
+ -----------------------------------------------------------------------------*/
+ .mobile-nav, .dropdown-content {
+     display: none;
+ }
+
+.hamburger {
+    background: #ffffff;
+    border: none;
+    color: #000000;
+}
+
+@media only screen and (max-width: 600px) {
+    .main-nav > ul > .right {
+        display: none;
+    }
+
+    .main-nav > ul {
+        flex-direction: column;
+    }
+
+    .main-nav ul .left {
+        margin-right: 0;
+    }
+
+    .mobile-nav {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-end;
+        position: absolute;
+        margin-top: 5px;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+
+    .hamburger > i {
+        font-size: 1.65em !important;
+    }
+
+    .toggle-display {
+        /* this is used for the dropdown menu */
+        display: flex;
+    }
+
+}
+
 /*----------------------------------------------------------------------------- 
  - HEADER 
  -----------------------------------------------------------------------------*/
@@ -178,6 +227,13 @@ a {
     margin: 1vh;
 }
 
+@media only screen and (max-width: 768px) {
+    .intro-pic {
+        height: 350px;
+        width: auto;
+    }
+}
+
 .intro h3 {
     font-size: 1.25em;
     margin: 2vh;
@@ -201,8 +257,13 @@ a {
 /*-----------------------------------------------------------------------------
  - Hover Effects 
  -----------------------------------------------------------------------------*/
-.main-nav ul li a:hover, .secondary-nav ul li a i:hover {
+.main-nav ul li a:hover,
+/* Need both of the following for firefox */
+.main-nav ul button:hover i, 
+.main-nav ul button:hover, 
+.secondary-nav ul li a i:hover {
     color: #3d8bff;
+    cursor: pointer;
 }
 
 a:visited {
