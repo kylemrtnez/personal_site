@@ -324,6 +324,10 @@ a {
     grid-area: second;
 }
 
+.proj-3 {
+    grid-area: third;
+}
+
 
 #portfolio {
     display: grid;
@@ -331,7 +335,7 @@ a {
     gap: 1em;
     background: #ffffff;
     grid-template-areas: 
-        "first second .";
+        "first second third";
 }
 
 @media only screen and (max-width: 600px) {
@@ -340,6 +344,7 @@ a {
         grid-template-areas: 
             "first"
             "second"
+            "third"
     }
 }
 
@@ -373,6 +378,11 @@ a {
     color: #92b9f3;
 }
 
+.proj-tech strong {
+    font-size: 1.1em;
+    font-weight: 700;
+}
+
 .proj-link, .proj-link:visited, .proj-src, .proj-src:visited {
     font-size: 0.60em;
     font-family: 'Quantico';
@@ -385,6 +395,9 @@ a {
     text-transform: uppercase;
 }
 
+.fa-terminal {
+    color: #9cf85f;
+}
 
 
 /*-----------------------------------------------------------------------------
