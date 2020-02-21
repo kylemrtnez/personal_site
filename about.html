@@ -9,27 +9,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Quantico" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
-    <script src="static/toggle.js"></script>
+
+    <script src="navbar.js" defer></script>
+    <script src="static/toggle.js" defer></script>
 </head>
 <body>
     <div class='wrapper'>
         <!-- Main Navigation Bar -->
-        <nav class='main-nav'>
-            <ul>
-                <li class='left'><a href="https://www.kylemartinez.dev">kyledmartinez.com</a> </li>
-                <li class='right'><a href="https://www.kylemartinez.dev/about.html">About</a></li>
-                <li class='right'><a href="mailto:kyle.martinez.043@gmail.com">Contact</a></li>
-                <li class='right'><a href="https://www.kylemartinez.dev">Portfolio</a></li>
-                <li class='right end-nav'><a href="static/Kyle_Martinez_Resume_v1.2.pdf">Resume</a></li>
-                <li class="dropdown-content"><a href="https://www.kylemartinez.dev/about.html">About</a></li>
-                <li class="dropdown-content"><a href="mailto:kyle.martinez.043@gmail.com">Contact</a></li>
-                <li class="dropdown-content"><a href="https://kylemartinez.dev">Portfolio</a></li>
-                <li class="dropdown-content"><a href="static/Kyle_Martinez_Resume_v1.2.pdf">Resume</a></li>
-                <div class="dropdown mobile-nav">
-                    <button class='hamburger'><i class="fas fa-bars fa-2x"></i></button>
-                </div>
-            </ul>
-        </nav> 
+        <nav-bar class='main-nav'></nav-bar>
 
         <header class='intro'>
             <h1>Hi, I'm Kyle.</h1>
